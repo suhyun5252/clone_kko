@@ -9,6 +9,11 @@
   /* outline-style: none; */
 }
 
+html{
+  font-size: 14px;
+  overflow-x: hidden;
+}
+
 body {
   font-family: "Inter", "Noto Sans KR", sans-serif;
   font-style: normal;
@@ -17,3 +22,13 @@ body {
   color: #1e1e1e;
   font-size: 14px;
 }
+
+a{
+  color: #1e1e1e;
+  text-decoration: none;
+}
+
+ul,li,ol{
+  list-style: none;
+}
+
