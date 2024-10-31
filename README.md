@@ -1,4 +1,4 @@
-# 카카오 블러그
+# 카카오 블로그
 
 ## 1. css
 
@@ -34,7 +34,7 @@ img {
 ### 2.2. 눈누
 
 - https://noonnu.cc
-- 웹포트로 사용에서 소스 코드를 복사해서 활용
+- 웹폰트로 사용에서 소스 코드를 복사해서 활용
 
 ### 2.3. 글꼴을 잘 하시는 에이전시 사이트
 
@@ -64,6 +64,7 @@ body {
   font-style: normal;
   font-weight: 400;
   font-optical-sizing: auto;
-  color: #000000;
+  color: #1e1e1e;
+  font-size: 14px;
 }
 ```
