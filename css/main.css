@@ -2,7 +2,7 @@
 .main {
   max-width: 1170px;
   min-height: 600px;
-  margin: 0px auto 60px;
+  margin: 67px auto 60px;
 }
 .layout {
 }
@@ -50,6 +50,7 @@
 
 .main-content {
   display: flex;
+  justify-content: space-between;
   margin-top: 60px;
 }
 .main-content .left {
@@ -161,5 +162,3 @@
 .list-cate-wrap {
 }
 
-.main-content .right {
-}
