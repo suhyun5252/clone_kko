@@ -1,8 +1,9 @@
 /* 메인영역 */
 .main {
-  max-width: 1170px;
-  min-height: 600px;
+  padding: 0 10px;
   margin: 67px auto 60px;
+  max-width: 1180px;
+  min-height: 600px;
 }
 .layout {
 }
@@ -58,9 +59,9 @@
 .list-new-wrap {
 }
 .list-title {
-  margin-bottom: 30px;
-  font-size: 24px;
   color: #1e1e1e;
+  font-size: 24px;
+  margin-bottom: 30px;
 }
 .list-thum-wrap {
   margin-bottom: 45px;
@@ -106,13 +107,13 @@
 }
 .thum-cate span {
   color: rgb(231, 0, 167);
-  font-size: 14px;
   font-weight: 500;
+  font-size: 14px;
 }
 .thum-title {
-  font-size: 20px;
   color: #2a364f;
   font-weight: 700;
+  font-size: 20px;
   margin-bottom: 30px;
 }
 .thum-date {
@@ -128,16 +129,16 @@
 .bt{
   padding: 11px 20px;
   border: 1px solid #1e1e1e;
+  font-weight: 700;
   border-radius: 20px;
   background-color: #fff;
   cursor: pointer;
-  font-weight: 700;
   transition: all .3s;
 }
 
 .bt:hover{
-  background-color: #1e1e1e;
   color: #fff;
+  background-color: #1e1e1e;
 }
 
 .banner {
