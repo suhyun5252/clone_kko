@@ -7,47 +7,7 @@
 }
 .layout {
 }
-.main-slide {
-  display: flex;
-  gap: 20px;
-}
-.main-slide .left {
-  width: 770px;
-  height: 470px;
-}
-.visual-slide {
-  width: 100%;
-  height: 100%;
-  border-radius: 20px;
-  overflow: hidden;
-}
-.visual-slide a {
-  width: 100%;
-  height: 100%;
-}
-.visual-slide a img {
-  width: 100%;
-  height: 100%;
-}
 
-.main-slide .right {
-  width: 370px;
-  height: 470px;
-}
-.card-slide {
-  width: 100%;
-  height: 100%;
-  border-radius: 20px;
-  overflow: hidden;
-}
-.card-slide a {
-  width: 100%;
-  height: 100%;
-}
-.card-slide a img {
-  width: 100%;
-  height: 100%;
-}
 
 .main-content {
   display: flex;
@@ -162,4 +122,6 @@
 
 .list-cate-wrap {
 }
+
+
 
