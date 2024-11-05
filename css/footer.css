@@ -6,7 +6,6 @@
 
 .footer-main{
   width: 100%;
-  height: 300px;
   padding: 40px 0;
 }
 .footer-main .layout{
@@ -54,7 +53,7 @@
   display: flex;
   gap: 80px;
 }
-.site-map-listlist-style: none;{}
+.site-map-list{}
 .site-map-list li{
   margin-bottom: 20px;
 }
@@ -117,3 +116,20 @@
 .youtube{}
 .github{}
 .facebook{}
+
+
+@media screen and (max-width : 1024px) {
+  .footer-main .layout{
+    display: block;
+  }
+
+  .footer-main .right {
+    margin-top: 40px;
+  }
+
+
+  .site-map-list{
+    width: 50%;
+  
+  }
+}

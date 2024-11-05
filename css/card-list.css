@@ -59,8 +59,33 @@
     border-radius: 30px;
 }
 
+/* 모바일 카드 슬라이드 */
+.mb-card-slide{
+    margin-top: 60px;
+    display: none;
+}
+
+
+/* js로 변경예정 */
+.mb-card-slide-wrap{
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.list-card-bt-wrap{
+    display: flex;
+    justify-content: center;
+}
+
 
 /* 메인 - 카드 */
 @media screen and (max-width : 1024px) {
-    .main-content .right{display: none;}
+    .main-content .right {
+        display: none;
+    }
+    .mb-card-slide{
+        display: block;
+    }
+    
 }
