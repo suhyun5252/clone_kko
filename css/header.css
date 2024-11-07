@@ -9,8 +9,10 @@
   z-index: 999;
   background-color: #fff;
   padding-top: 15px;
+}
 
-
+.header.active{
+  border-bottom: 1px solid #eee !important;
 }
 
 .header .layout {
@@ -66,8 +68,8 @@
   display: none;
 }
 
+
 .bg-mb-menu {
-  display: none;
   background-color: rgba(0, 0, 0, .7);
   width: 100%;
   height: 100vh;
@@ -75,6 +77,14 @@
   left: 0;
   top: 0;
   z-index: 999;
+  transition: all .3s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.bg-mb-menu-active{
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 .navigation button {
@@ -96,7 +106,13 @@
   left: 0;
   width: 100%;
   z-index: 999;
-  display: none;
+  transition: all .3s;
+  height: 0;
+  overflow: hidden;
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, .2);
+}
+.mb-menu-active{
+  height: 180px !important;
 }
 
 .mb-menu .layout{
