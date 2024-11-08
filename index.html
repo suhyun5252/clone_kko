@@ -9,6 +9,13 @@
     <link rel="icon" href="./images/icon/cropped-main-shape-32x32.png" type="image/x-icon">
     <title>카카오브레인블로그 클론 프로젝트</title>
 
+    <!-- swiper -->
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <!-- xeicon -->
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
     <!-- reset.css -->
@@ -25,13 +32,11 @@
     <link rel="stylesheet" href="./css/footer.css" />
     <!-- javascript -->
     <script src="./js/header.js"></script>
+    <script src="./js/slide-logo.js"></script>
     <script src="./js/main.js"></script>
+    <script src="./js/slide-main.js"></script>
+    <script src="./js/slide-card.js"></script>
     <script src="./js/footer.js"></script>
-    
-
-    <!-- <script>
-      console.log("1")
-    </script> -->
 
   </head>
 
@@ -51,8 +56,55 @@
             <img src="./images/etc/logo-kakao.png" alt="카카오블로그" />
           </a>
 
-          <div class="header-logo-motion">
-            <img src="./images/etc/logo-blog01.png" alt="블로그 이미지" />
+          <div class="swiper header-logo-motion">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="#">
+                  <img src="./images/etc/logo-blog01.png" alt="블로그 이미지1"/>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#">
+                  <img src="./images/etc/logo-blog02.png" alt="블로그 이미지2"/>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#">
+                  <img src="./images/etc/logo-blog03.png" alt="블로그 이미지3"/>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#">
+                  <img src="./images/etc/logo-blog04.png" alt="블로그 이미지4"/>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#">
+                  <img src="./images/etc/logo-blog05.png" alt="블로그 이미지5"/>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#">
+                  <img src="./images/etc/logo-blog06.png" alt="블로그 이미지6"/>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#">
+                  <img src="./images/etc/logo-blog07.png" alt="블로그 이미지7"/>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#">
+                  <img src="./images/etc/logo-blog08.png" alt="블로그 이미지8"/>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#">
+                  <img src="./images/etc/logo-blog09.png" alt="블로그 이미지9"/>
+                </a>
+              </div>
+            </div>
+            
           </div>
         </div>
         <!-- 메뉴 및 검색창 -->
@@ -93,10 +145,30 @@
           <!-- 왼쪽 슬라이드 -->
           <div class="left">
             <!-- 교체 가능 -->
-            <div class="visual-slide">
-              <a href="#">
-                <img src="./images/b1.png" alt="배너이미지" />
-              </a>
+            <div class="swiper visual-slide">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="#">
+                    <img src="./images/b1.png" alt="배너이미지" />
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#">
+                    <img src="./images/b2.png" alt="배너이미지" />
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#">
+                    <img src="./images/b3.png" alt="배너이미지" />
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#">
+                    <img src="./images/b4.png" alt="배너이미지" />
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-pagination "></div>
             </div>
           </div>
 
@@ -321,55 +393,69 @@
       <!-- 반응형 카드 슬라이드 -->
       <div class="mb-card-slide">
         <h4 class="list-title">폴더 📁</h4>
-        <div class="mb-card-slide-wrap">
-          <!-- @start card -->
-          <a href="#" class="card-wrap">
-            <div class="card-img">
-              <img src="./images/p1.png" alt="카드이미지"/>
+        <div class="swiper mb-card-slide-wrap">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="#" class="card-wrap">
+                <div class="card-img">
+                  <img src="./images/p1.png" alt="카드이미지"/>
+                </div>
+                <div class="card-info">
+                  <h5 class="card-cate">LLMs</h5>
+                  <span class="card-count">5</span>
+                </div>
+              </a>
             </div>
-            <div class="card-info">
-              <h5 class="card-cate">LLMs</h5>
-              <span class="card-count">5</span>
-            </div>
-          </a>
-          <!-- @end card -->
+              
 
-          <!-- @start card -->
-          <a href="#" class="card-wrap">
-            <div class="card-img">
-              <img src="./images/p1.png" alt="카드이미지"/>
+            <div class="swiper-slide">
+              <a href="#" class="card-wrap">
+                <div class="card-img">
+                  <img src="./images/p1.png" alt="카드이미지"/>
+                </div>
+                <div class="card-info">
+                  <h5 class="card-cate">LLMs</h5>
+                  <span class="card-count">5</span>
+                </div>
+              </a>
             </div>
-            <div class="card-info">
-              <h5 class="card-cate">LLMs</h5>
-              <span class="card-count">5</span>
-            </div>
-          </a>
-          <!-- @end card -->
 
-          <!-- @start card -->
-          <a href="#" class="card-wrap">
-            <div class="card-img">
-              <img src="./images/p1.png" alt="카드이미지"/>
+            <div class="swiper-slide">
+              <a href="#" class="card-wrap">
+                <div class="card-img">
+                  <img src="./images/p1.png" alt="카드이미지"/>
+                </div>
+                <div class="card-info">
+                  <h5 class="card-cate">LLMs</h5>
+                  <span class="card-count">5</span>
+                </div>
+              </a>
             </div>
-            <div class="card-info">
-              <h5 class="card-cate">LLMs</h5>
-              <span class="card-count">5</span>
-            </div>
-          </a>
-          <!-- @end card -->
 
-          <!-- @start card -->
-          <a href="#" class="card-wrap">
-            <div class="card-img">
-              <img src="./images/p1.png" alt="카드이미지"/>
+            <div class="swiper-slide">
+              <a href="#" class="card-wrap">
+                <div class="card-img">
+                  <img src="./images/p1.png" alt="카드이미지" />
+                </div>
+                <div class="card-info">
+                  <h5 class="card-cate">LLMs</h5>
+                  <span class="card-count">5</span>
+                </div>
+              </a>
             </div>
-            <div class="card-info">
-              <h5 class="card-cate">LLMs</h5>
-              <span class="card-count">5</span>
-            </div>
-          </a>
-          <!-- @end card -->
 
+            <div class="swiper-slide">
+              <a href="#" class="card-wrap">
+                <div class="card-img">
+                  <img src="./images/p1.png" alt="카드이미지" />
+                </div>
+                <div class="card-info">
+                  <h5 class="card-cate">LLMs</h5>
+                  <span class="card-count">5</span>
+                </div>
+              </a>
+            </div>
+          </div>
         </div>
         <div class="list-card-bt-wrap">
           <button type="button" id="bt-mb-more-card" class="bt">전체보기</button>

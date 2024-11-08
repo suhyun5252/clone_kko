@@ -48,6 +48,19 @@
     object-fit: cover;
   }
   /* 가로 너비 대비 세로가 평상시에도 변한다. */
+
+  .visual-slide .swiper-pagination-bullet{
+    background-color: #fff;
+    opacity: .8;
+    transition: all .1s;
+  }
+  .visual-slide .swiper-pagination-bullet-active {
+    background-color: beige;
+    width: 35px;
+    border-radius: 5px;
+  }
+
+  .swiper-pagination{}
   
   /* main 반응형 */
   @media screen and (max-width : 1024px) {

@@ -63,19 +63,27 @@
 .mb-card-slide{
     margin-top: 60px;
     display: none;
-}
 
+}
+.mb-card-slide{overflow: hidden;}
 
 /* js로 변경예정 */
 .mb-card-slide-wrap{
     display: flex;
     justify-content: space-between;
     gap: 15px;
+    /* width: 1000px; */
+
 }
 
 .list-card-bt-wrap{
     display: flex;
     justify-content: center;
+}
+
+.card-wrap {
+    height: 266px;
+    width: 240px;
 }
 
 
