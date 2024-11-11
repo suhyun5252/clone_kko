@@ -72,7 +72,8 @@
     display: flex;
     justify-content: space-between;
     gap: 15px;
-    /* width: 1000px; */
+    width: 1160px;
+    padding-top: 10px;
 
 }
 
@@ -81,19 +82,22 @@
     justify-content: center;
 }
 
-.card-wrap {
+
+/* .card-wrap {
     height: 266px;
     width: 240px;
-}
-
+} */
 
 /* 메인 - 카드 */
 @media screen and (max-width : 1024px) {
     .main-content .right {
         display: none;
+        gap: 0;
     }
     .mb-card-slide{
         display: block;
     }
+
+   
     
 }

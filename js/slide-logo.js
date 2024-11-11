@@ -19,16 +19,40 @@ window.addEventListener("load",function(){
     })
     .then(function(result){
         // 1. json 뜯기
-        console.log(result);
+        // console.log(result);
         // 2. 반복해서 html 태그를 생성
         let logoHtml = "";
         for(let i = 0; i < 9; i++){
-            const data = `<img src="${result[i].imgUrl}" alt ="${result[i].desc}"/>`;
+            const obj = result[i];
+            const data = `<div class="swiper-slide">
+                <a href="#"><img src="./images/etc/${obj.imgUrl}" alt ="${obj.desc}"/> </a>
+              </div>`;
             logoHtml += data;
         }
-        console.log(logoHtml)
+        // console.log(logoHtml);
         // 3. 생성된 html을 원하는 곳에 배치
+            const headerLogoTag = document.querySelector(".header-logo-motion .swiper-wrapper");
+            // console.log(headerLogoTag);
+            headerLogoTag.innerHTML = logoHtml;
+
+
         // 4. swiper 생성 및 실행
+        const headerLogo = new Swiper(".header-logo-motion",{
+            loop : true,
+            autoplay : {
+                delay : 1500,
+                disableOnInteration : false
+            },
+            effect: "fade",
+            fadeEffect: {
+                crossFade: true
+              }
+        });
+
+        headerLogoTag.addEventListener("mouseenter",function(){
+            headerLogo.slideToLoop(0);
+        }) 
+
     })
     .catch(function(error){
         console.log(error);
@@ -37,15 +61,5 @@ window.addEventListener("load",function(){
 
 
     // const logoData;
-    const headerLogo = new Swiper(".header-logo-motion",{
-        loop : true,
-        autoplay : {
-            delay : 1500,
-            disableOnInteration : false
-        },
-        effect: "fade",
-        fadeEffect: {
-            crossFade: true
-          }
-    });
+
 })
