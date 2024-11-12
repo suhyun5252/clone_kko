@@ -114,7 +114,7 @@ window.addEventListener("load",function(){
         window.addEventListener("resize",function(){
             // 웹브라우저의 넓이를 체크한다.
             const windowWidth = window.innerWidth;
-            console.log(windowWidth);
+            // console.log(windowWidth);
             // css 코드에 반응형 작동이 1024px부터 작동하니깐
             if(windowWidth > 1024){
                 // 모바일 버튼을 원래대로 되돌린다.

@@ -48,10 +48,15 @@ window.addEventListener("load",function(){
                 crossFade: true
               }
         });
+        headerLogo.autoplay.stop();
 
         headerLogoTag.addEventListener("mouseenter",function(){
+            headerLogo.autoplay.start();
+        });
+        headerLogoTag.addEventListener("mouseleave",function(){
+            headerLogo.autoplay.stop();
             headerLogo.slideToLoop(0);
-        }) 
+        });
 
     })
     .catch(function(error){
