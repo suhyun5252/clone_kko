@@ -1,3 +1,59 @@
+$(window).ready(function(){
+ var LOGO_DATA_URL = "/apis/logodata.json";
+  //데이터베이스 연동
+ $.ajax({
+    url: LOGO_DATA_URL,
+    method : "GET",
+    datatype : "json",
+    success : function(result){
+        // console.log("ajax :" ,result);
+
+    var logoHtml = "";
+    for(var i = 0; i < 9; i++){
+        var obj = result[i];
+        var data = "";
+        data += "<div class='swiper-slide'>";
+        data += "<a href='#'>";
+        data += "<img src='./images/etc/";
+        data += obj.imgUrl;
+        data += "' alt ='";
+        data += obj.desc;
+        data += "' /> </a></div>"
+        logoHtml += data;
+    }
+    
+        var headerLogoTag = $(".header-logo-motion .swiper-wrapper");
+        
+        headerLogoTag.html(logoHtml);
+
+        var headerLogo = new Swiper(".header-logo-motion",{
+            loop : true,
+            autoplay : {
+                delay : 1500,
+                disableOnInteration : false
+            },
+            effect: "fade",
+            fadeEffect: {
+                crossFade: true
+              }
+        });
+        headerLogo.autoplay.stop();
+
+        headerLogoTag.addEventListener("mouseenter",function(){
+            headerLogo.autoplay.start();
+        });
+        headerLogoTag.addEventListener("mouseleave",function(){
+            headerLogo.autoplay.stop();
+            headerLogo.slideToLoop(0);
+        });
+        
+    }, //then이랑 같음
+    error : function(error){} //catch와 같음
+ });
+
+})
+
+// -------------  바닐라 자바스크립트 ----------------//
 window.addEventListener("load",function(){
     // MockData
     // {imgUrl : "경로" , desc : "설명문"}

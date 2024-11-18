@@ -1,3 +1,59 @@
+// jQuery의 목적 2가지
+// html 및 css 제어
+// 외부데이터 연동
+// 이미지가 다 로드되었는지는 관여 안함
+// jQuery(); = $();
+
+// html과 css가 화면에 보일 준비가 끝나면
+// image, font, mp3, mp4 는 로딩 체크를 못함.
+// window.addEventListener("DOMContentLoaded",function(){}) 와 같음
+// $(document).ready(function(){});
+$(document).ready(function(){
+    var header = $(".header");
+    // 2. 스크롤 체크하기
+    $(window).on("scroll",function(){
+        var scrollPositionY = $(window).scrollTop();
+        if(scrollPositionY>0){
+            header.addClass("active");
+        }else{
+            header.removeClass("active");
+        }
+    });
+});
+// 이미지 바꾸기 및 메뉴 펼침
+$(document).ready(function () {
+    var mobileButton = $("#mb-menu-bt");
+    var mobileButtonImage = $("#mb-menu-bt img");
+    var openIcon = "./images/icon/icon-hbr.png";
+    var closeIcon = "./images/icon/icon-close.png";
+    var mobileMenuBg = $(".bg-mb-menu");
+    var mobileMenu = $(".mb-menu");
+  
+    mobileButton.on("click", function () {
+      var imageSrc = mobileButtonImage.attr("src");
+      if (imageSrc == openIcon) {
+        mobileButtonImage.attr("src", closeIcon);
+        mobileMenuBg.addClass("bg-mb-menu-active");
+        mobileMenu.addClass("mb-menu-active");
+      } else {
+        mobileButtonImage.attr("src", openIcon);
+        mobileMenuBg.removeClass("bg-mb-menu-active");
+        mobileMenu.removeClass("mb-menu-active");
+      }
+    });
+  
+    $(window).on("resize", function () {
+      var windowWidth = $(window).width();
+      if (windowWidth > 1024) {
+        mobileButtonImage.attr("src", openIcon);
+        mobileMenuBg.removeClass("bg-mb-menu-active");
+        mobileMenu.removeClass("mb-menu-active");
+      }
+    });
+  });
+
+
+// -----------------------------바닐라 스크립트 ---------------------//
 // 협업에서는 소스 컨벤션 중요
 window.addEventListener("load",function(){
     //   console.log("load 완료")
@@ -6,7 +62,7 @@ window.addEventListener("load",function(){
     // 3. 라벨이 붙은 보관함에 재료를 담겠다.
     // 4. 그리고 제어하겠다.
     
-    const searchBtn = this.document.querySelector('#search');
+    const searchBtn = document.querySelector('#search');
     // console.log(searchBtn);
     /* 
         1. 사용자가 스크롤바로 화면 아래로 이동시
@@ -16,7 +72,7 @@ window.addEventListener("load",function(){
     */
     
         // 1. header를 보감함에 담는다.
-        const header = this.document.querySelector(".header");
+        const header = document.querySelector(".header");
         // console.log(header);
     
         // 2. 스크롤 체크하기
