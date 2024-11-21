@@ -1,0 +1,137 @@
+.main-slide {
+  display: flex;
+  /* 20 / 1180 * 100 */
+  gap: 1.695vw;
+}
+
+.main-slide .left {
+  /* 770 나누기 1180 곱하기 100 = 65.254  */
+  width: 65.254vw;
+  max-width: 770px;
+  /* 470 나누기 1180 곱하기 100 = 65.254  */
+  height: 39.83vw;
+  max-height: 470px;
+}
+
+.visual-slide {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.visual-slide a {
+  width: 100%;
+  height: 100%;
+}
+.visual-slide a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.visual-slide a .title {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: right;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 40px;
+  padding-right: 40px;
+  padding-bottom: 40px;
+}
+
+.visual-slide .swiper-pagination .swiper-pagination-bullet {
+  background-color: #ffffff;
+  width: 4px;
+  height: 4px;
+  border-radius: 4px;
+  opacity: 0.6;
+  transition: all 0.5s;
+}
+
+.visual-slide .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #ffffff;
+  width: 20px;
+}
+
+.main-slide .right {
+  /* 370 / 1180 * 100 */
+  width: 31.355vw;
+  max-width: 370px;
+
+  /* 470 / 1180 * 100  */
+  height: 39.83vw;
+  max-height: 470px;
+}
+.card-slide {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.card-slide a {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.card-slide a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card-slide .title {  
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: right;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 40px;
+  padding-right: 40px;
+  padding-bottom: 40px;
+}
+}
+.list-card-bt-wrap {
+  display: flex;
+  justify-content: center;
+}
+/* 하단 카드 슬라이드 */
+.mb-card-slide {
+  display: none;
+  margin-top: 60px;
+  overflow: hidden;
+}
+/* js 로 변경 예정 */
+.mb-card-slide-wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  width: 1160px;
+}
+/* 가로 너비 대비 세로가 평상시에도 변한다. */
+@media screen and (max-width: 1024px) {
+  .main-slide {
+    display: block;
+    gap: 0;
+  }
+  .main-slide {
+    width: 100%;
+  }
+  .main-slide .left {
+    width: 100%;
+    max-width: 100%;
+    height: 980px;
+    max-height: 980px;
+  }
+
+  .main-slide .right {
+    display: none;
+  }
+
+  /* 안보이던 하단 카드 슬라이드 보이기 */
+  .mb-card-slide {
+    display: block;
+  }
+}
