@@ -21,14 +21,14 @@ function Header() {
 
     const mobileButton = document.querySelector("#mb-menu-bt");
     const mobileButtonImage = document.querySelector("#mb-menu-bt img");
-    const openIcon = "./images/icon/icon-hbr.png";
-    const closeIcon = "./images/icon/icon-close.png";
+    const openIcon = "/images/icon/icon-hbr.png";
+    const closeIcon = "/images/icon/icon-close.png";
     const mobileMenuBg = document.querySelector(".bg-mb-menu");
     const mobileMenu = document.querySelector(".mb-menu");
 
     mobileButton.addEventListener("click", function () {
       const imageSrc = mobileButtonImage.getAttribute("src");
-      if (imageSrc == openIcon) {
+      if (imageSrc === openIcon) {
         mobileButtonImage.setAttribute("src", closeIcon);
         mobileMenuBg.classList.add("bg-mb-menu-active");
         mobileMenu.classList.add("mb-menu-active");
