@@ -1,4 +1,3 @@
-import React from "react";
 import ListNewWrap from "./ListNewWrap";
 import Banner from "./Banner";
 import ListCateWrap from "./ListCateWrap";

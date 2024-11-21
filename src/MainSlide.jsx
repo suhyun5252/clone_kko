@@ -1,4 +1,3 @@
-import React from "react";
 import VisualSlide from "./VisualSlide";
 import CardSlide from "./CardSlide";
 

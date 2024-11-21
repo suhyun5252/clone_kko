@@ -1,12 +1,60 @@
-import React from "react";
-
+import { useEffect } from "react";
+import "./css/header.css";
 function Header() {
+  // 자바스크립트 자리
+  // 화면에 JSX 가 보이면
+  // document에 JSX로 만든 html 이 innerHtml 하면
+  // 그때부터는 querySelecter 할 수 있음.
+
+  // window.addEventListener("load",function(){})
+  useEffect(function () {
+    const header = document.querySelector(".header");
+
+    window.addEventListener("scroll", function () {
+      const scrollPositionY = window.scrollY();
+      if (scrollPositionY > 0) {
+        header.classList.add("header-active");
+      } else {
+        header.classList.remove("header-active");
+      }
+    });
+
+    const mobileButton = document.querySelector("#mb-menu-bt");
+    const mobileButtonImage = document.querySelector("#mb-menu-bt img");
+    const openIcon = "./images/icon/icon-hbr.png";
+    const closeIcon = "./images/icon/icon-close.png";
+    const mobileMenuBg = document.querySelector(".bg-mb-menu");
+    const mobileMenu = document.querySelector(".mb-menu");
+
+    mobileButton.addEventListener("click", function () {
+      const imageSrc = mobileButtonImage.getAttribute("src");
+      if (imageSrc == openIcon) {
+        mobileButtonImage.setAttribute("src", closeIcon);
+        mobileMenuBg.classList.add("bg-mb-menu-active");
+        mobileMenu.classList.add("mb-menu-active");
+      } else {
+        mobileButtonImage.setAttribute("src", openIcon);
+        mobileMenuBg.classList.remove("bg-mb-menu-active");
+        mobileMenu.classList.remove("mb-menu-active");
+      }
+    });
+
+    window.addEventListener("resize", function () {
+      const windowWidth = window.innerWidth;
+      if (windowWidth > 1024) {
+        mobileButtonImage.setAttribute("src", openIcon);
+        mobileMenuBg.classList.remove("bg-mb-menu-active");
+        mobileMenu.classList.remove("mb-menu-active");
+      }
+    });
+  }, []);
+
   return (
     <header className="header">
       <div className="layout">
         <div id="logo" className="header-logo">
           <a href="/" className="header-logo-link">
-            <img src="./images/etc/logo-kakao.png" alt="카카오블로그" />
+            <img src="/images/etc/logo-kakao.png" alt="카카오블로그" />
           </a>
 
           <div className="swiper header-logo-motion">
@@ -20,11 +68,11 @@ function Header() {
           <a href="#">영입</a>
 
           <button id="search">
-            <img src="./images/icon/icon-search.png" alt="" />
+            <img src="/images/icon/icon-search.png" alt="" />
           </button>
 
           <button id="mb-menu-bt">
-            <img src="./images/icon/icon-hbr.png" alt="모바일메뉴" />
+            <img src="/images/icon/icon-hbr.png" alt="모바일메뉴" />
           </button>
         </div>
       </div>
